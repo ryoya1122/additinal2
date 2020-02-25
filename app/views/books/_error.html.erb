@@ -1,0 +1,10 @@
+<% if book.errors.any? %>
+  <div class="errmsg">
+    <ul>
+      <li><%= book.errors.count %> errors prohibited this obj being saved</li>
+      <% book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
